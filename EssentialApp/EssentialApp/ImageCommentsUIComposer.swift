@@ -10,34 +10,45 @@ import EssentialFeediOS
 public final class ImageCommentsUIComposer {
 	private init() {}
 
-	private typealias FeedPresentationAdapter = LoadResourcePresentationAdapter<[FeedImage], FeedViewAdapter>
+	private typealias ImageCommentsPresentationAdapter = LoadResourcePresentationAdapter<[ImageComment], ImageCommentViewAdapter>
 
 	public static func imageCommentsComposedWith(
-		commentsLoader: @escaping () -> AnyPublisher<[FeedImage], Error>,
-		selection: @escaping (FeedImage) -> Void = { _ in }
+		commentsLoader: @escaping () -> AnyPublisher<[ImageComment], Error>
 	) -> ListViewController {
-		let presentationAdapter = FeedPresentationAdapter(loader: commentsLoader)
+		let presentationAdapter = ImageCommentsPresentationAdapter(loader: commentsLoader)
 
-		let feedController = makeFeedViewController(title: FeedPresenter.title)
-		feedController.onRefresh = presentationAdapter.loadResource
+		let imageCommentsController = makeImageCommentsViewController(title: ImageCommentsPresenter.title)
+		imageCommentsController.onRefresh = presentationAdapter.loadResource
 
 		presentationAdapter.presenter = LoadResourcePresenter(
-			resourceView: FeedViewAdapter(
-				controller: feedController,
-				imageLoader: { _ in Empty<Data, Error>().eraseToAnyPublisher() },
-				selection: selection),
-			loadingView: WeakRefVirtualProxy(feedController),
-			errorView: WeakRefVirtualProxy(feedController),
-			mapper: FeedPresenter.map)
+			resourceView: ImageCommentViewAdapter(
+				controller: imageCommentsController),
+			loadingView: WeakRefVirtualProxy(imageCommentsController),
+			errorView: WeakRefVirtualProxy(imageCommentsController),
+			mapper: { ImageCommentsPresenter.map($0) })
 
-		return feedController
+		return imageCommentsController
 	}
 
-	private static func makeFeedViewController(title: String) -> ListViewController {
+	private static func makeImageCommentsViewController(title: String) -> ListViewController {
 		let bundle = Bundle(for: ListViewController.self)
-		let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
-		let feedController = storyboard.instantiateInitialViewController() as! ListViewController
-		feedController.title = title
-		return feedController
+		let storyboard = UIStoryboard(name: "ImageComments", bundle: bundle)
+		let imageCommentController = storyboard.instantiateInitialViewController() as! ListViewController
+		imageCommentController.title = title
+		return imageCommentController
+	}
+}
+
+private final class ImageCommentViewAdapter: ResourceView {
+	private weak var controller: ListViewController?
+
+	init(controller: ListViewController) {
+		self.controller = controller
+	}
+
+	func display(_ viewModel: ImageCommentsViewModel) {
+		controller?.display(viewModel.comments.map { viewModel in
+			CellController(id: viewModel, ImageCommentCellController(model: viewModel))
+		})
 	}
 }
