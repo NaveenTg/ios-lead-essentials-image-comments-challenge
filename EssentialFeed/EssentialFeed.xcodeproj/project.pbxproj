@@ -111,6 +111,7 @@
 		5D99EDB526AB034B00032E41 /* ImageComments.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D99EDB726AB034B00032E41 /* ImageComments.strings */; };
 		5D99EDBB26AB061A00032E41 /* ImageCommentsLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDBA26AB061A00032E41 /* ImageCommentsLocalizationTests.swift */; };
 		5D99EDBD26AB08AA00032E41 /* ImageCommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDBC26AB08AA00032E41 /* ImageCommentsViewModel.swift */; };
+		5D99EDC026AB0C1100032E41 /* ImageCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDBF26AB0C1100032E41 /* ImageCommentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +247,7 @@
 		5D99EDB926AB035100032E41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ImageComments.strings"; sourceTree = "<group>"; };
 		5D99EDBA26AB061A00032E41 /* ImageCommentsLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsLocalizationTests.swift; sourceTree = "<group>"; };
 		5D99EDBC26AB08AA00032E41 /* ImageCommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsViewModel.swift; sourceTree = "<group>"; };
+		5D99EDBF26AB0C1100032E41 /* ImageCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -808,6 +810,7 @@
 				5D99EDB726AB034B00032E41 /* ImageComments.strings */,
 				5D99EDB026AB012600032E41 /* ImageCommentsPresenter.swift */,
 				5D99EDBC26AB08AA00032E41 /* ImageCommentsViewModel.swift */,
+				5D99EDBF26AB0C1100032E41 /* ImageCommentViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -1092,6 +1095,7 @@
 				08604503233E2917005ECD22 /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */,
 				087148C2232BFC7100D6BE1A /* FeedImagePresenter.swift in Sources */,
 				08F8822D236499B200CAEE16 /* FeedCache.swift in Sources */,
+				5D99EDC026AB0C1100032E41 /* ImageCommentViewModel.swift in Sources */,
 				08285AFF228C1874000A8987 /* ManagedFeedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
