@@ -14,7 +14,7 @@ class ImageCommentsUIIntegrationTests: XCTestCase {
 
         sut.loadViewIfNeeded()
 
-        XCTAssertEqual(sut.title, feedTitle)
+        XCTAssertEqual(sut.title, imageCommentsTitle)
     }
 
     func test_imageSelection_notifiesHandler() {
