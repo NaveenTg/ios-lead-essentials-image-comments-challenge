@@ -38,33 +38,40 @@ class ImageCommentsMapperTests: XCTestCase {
 	}
 
 	func test_map_deliversItemsOn200HTTPResponseWithJSONItems() throws {
-		let item1 = makeItem(
+		let item1 = makeComment(
 			id: UUID(),
-			imageURL: URL(string: "http://a-url.com")!)
+			message: "First Message",
+			createdAt: (Date(timeIntervalSince1970: 1627042700), "2021-07-23T12:18:20+00:00"),
+			userName: "First UserName")
 
-		let item2 = makeItem(
+		let item2 = makeComment(
 			id: UUID(),
-			description: "a description",
-			location: "a location",
-			imageURL: URL(string: "http://another-url.com")!)
+			message: "Second Message",
+			createdAt: (Date(timeIntervalSince1970: 1627042700), "2021-07-23T12:18:20+00:00"),
+			userName: "Second UserName")
 
 		let json = makeItemsJSON([item1.json, item2.json])
-
-		let result = try ImageCommentsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
-
-		XCTAssertEqual(result, [item1.model, item2.model])
+		let samples = [200, 201, 250, 270, 299]
+		try samples.forEach { code in
+			let result = try ImageCommentsMapper.map(json, from: HTTPURLResponse(statusCode: code))
+			XCTAssertEqual(result, [item1.model, item2.model])
+		}
 	}
 
 	// MARK: - Helpers
 
-	private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
-		let item = FeedImage(id: id, description: description, location: location, url: imageURL)
-
-		let json = [
+	private func makeComment(id: UUID, message: String, createdAt: (date: Date, iso8601String: String), userName: String) -> (model: ImageComment, json: [String: Any]) {
+		let item = ImageComment(id: id,
+		                        message: message,
+		                        createdAt: createdAt.date,
+		                        userName: userName)
+		let json: [String: Any] = [
 			"id": id.uuidString,
-			"description": description,
-			"location": location,
-			"image": imageURL.absoluteString
+			"message": message,
+			"createdAt": createdAt.iso8601String,
+			"author": [
+				"userName": userName
+			]
 		].compactMapValues { $0 }
 
 		return (item, json)
