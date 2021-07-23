@@ -34,5 +34,5 @@ var feedTitle: String {
 }
 
 var imageCommentsTitle: String {
-    ImageCommentsPresenter.title
+	ImageCommentsPresenter.title
 }
