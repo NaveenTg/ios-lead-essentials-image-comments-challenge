@@ -16,14 +16,14 @@ public final class ImageCommentsMapper {
 		}
 
 		private struct Author: Decodable {
-			let userName: String
+			let username: String
 		}
 
 		var comments: [ImageComment] {
 			items.map { ImageComment(id: $0.id,
 			                         message: $0.message,
 			                         createdAt: $0.createdAt,
-			                         userName: $0.author.userName)
+			                         userName: $0.author.username)
 			}
 		}
 	}

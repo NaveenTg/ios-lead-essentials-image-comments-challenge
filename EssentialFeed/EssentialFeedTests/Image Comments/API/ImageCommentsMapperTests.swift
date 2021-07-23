@@ -70,7 +70,7 @@ class ImageCommentsMapperTests: XCTestCase {
 			"message": message,
 			"createdAt": createdAt.iso8601String,
 			"author": [
-				"userName": userName
+				"username": userName
 			]
 		].compactMapValues { $0 }
 
