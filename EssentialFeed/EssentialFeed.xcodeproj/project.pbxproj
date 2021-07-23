@@ -118,6 +118,7 @@
 		5D99EDCC26AB1E3E00032E41 /* ImageCommentsSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDCB26AB1E3E00032E41 /* ImageCommentsSnapshotTests.swift */; };
 		5D99EDD326AB228000032E41 /* IMAGE_COMMENTS_WITH_CONTENT_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D99EDD226AB228000032E41 /* IMAGE_COMMENTS_WITH_CONTENT_dark.png */; };
 		5D99EDD526AB228A00032E41 /* IMAGE_COMMENTS_WITH_CONTENT_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D99EDD426AB228A00032E41 /* IMAGE_COMMENTS_WITH_CONTENT_light.png */; };
+		5D99EDD726AB258D00032E41 /* IMAGE_COMMENTS_CONTENT_light_extraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D99EDD626AB258D00032E41 /* IMAGE_COMMENTS_CONTENT_light_extraExtraLarge.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +261,7 @@
 		5D99EDCB26AB1E3E00032E41 /* ImageCommentsSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsSnapshotTests.swift; sourceTree = "<group>"; };
 		5D99EDD226AB228000032E41 /* IMAGE_COMMENTS_WITH_CONTENT_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_WITH_CONTENT_dark.png; sourceTree = "<group>"; };
 		5D99EDD426AB228A00032E41 /* IMAGE_COMMENTS_WITH_CONTENT_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_WITH_CONTENT_light.png; sourceTree = "<group>"; };
+		5D99EDD626AB258D00032E41 /* IMAGE_COMMENTS_CONTENT_light_extraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_CONTENT_light_extraExtraLarge.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -846,6 +848,7 @@
 			children = (
 				5D99EDD226AB228000032E41 /* IMAGE_COMMENTS_WITH_CONTENT_dark.png */,
 				5D99EDD426AB228A00032E41 /* IMAGE_COMMENTS_WITH_CONTENT_light.png */,
+				5D99EDD626AB258D00032E41 /* IMAGE_COMMENTS_CONTENT_light_extraExtraLarge.png */,
 			);
 			path = snapshots;
 			sourceTree = "<group>";
@@ -1033,6 +1036,7 @@
 				084BF96E251B9A1000E57FC8 /* LIST_WITH_ERROR_MESSAGE_dark.png in Resources */,
 				5D99EDD526AB228A00032E41 /* IMAGE_COMMENTS_WITH_CONTENT_light.png in Resources */,
 				5D99EDD326AB228000032E41 /* IMAGE_COMMENTS_WITH_CONTENT_dark.png in Resources */,
+				5D99EDD726AB258D00032E41 /* IMAGE_COMMENTS_CONTENT_light_extraExtraLarge.png in Resources */,
 				084BF970251B9A1000E57FC8 /* FEED_WITH_CONTENT_dark.png in Resources */,
 				084BF972251B9A1000E57FC8 /* FEED_WITH_CONTENT_light.png in Resources */,
 				084BF974251B9A1000E57FC8 /* LIST_WITH_ERROR_MESSAGE_light.png in Resources */,
