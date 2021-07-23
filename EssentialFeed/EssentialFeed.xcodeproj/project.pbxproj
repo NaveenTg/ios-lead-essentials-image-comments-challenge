@@ -106,9 +106,9 @@
 		5D99EDA826AADA7600032E41 /* ImageComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDA726AADA7600032E41 /* ImageComment.swift */; };
 		5D99EDAA26AAF78600032E41 /* ImageCommentsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDA926AAF78500032E41 /* ImageCommentsEndpoint.swift */; };
 		5D99EDAC26AAF83D00032E41 /* ImageCommentsEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDAB26AAF83D00032E41 /* ImageCommentsEndpointTests.swift */; };
-		5D99EDAF26AB00F700032E41 /* ImageComments.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D99EDAE26AB00F700032E41 /* ImageComments.strings */; };
 		5D99EDB126AB012600032E41 /* ImageCommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDB026AB012600032E41 /* ImageCommentsPresenter.swift */; };
 		5D99EDB426AB01A600032E41 /* ImageCommentsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDB326AB01A600032E41 /* ImageCommentsPresenterTests.swift */; };
+		5D99EDB526AB034B00032E41 /* ImageComments.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D99EDB726AB034B00032E41 /* ImageComments.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,9 +237,11 @@
 		5D99EDA726AADA7600032E41 /* ImageComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComment.swift; sourceTree = "<group>"; };
 		5D99EDA926AAF78500032E41 /* ImageCommentsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsEndpoint.swift; sourceTree = "<group>"; };
 		5D99EDAB26AAF83D00032E41 /* ImageCommentsEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsEndpointTests.swift; sourceTree = "<group>"; };
-		5D99EDAE26AB00F700032E41 /* ImageComments.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ImageComments.strings; sourceTree = "<group>"; };
 		5D99EDB026AB012600032E41 /* ImageCommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsPresenter.swift; sourceTree = "<group>"; };
 		5D99EDB326AB01A600032E41 /* ImageCommentsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsPresenterTests.swift; sourceTree = "<group>"; };
+		5D99EDB626AB034B00032E41 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/ImageComments.strings; sourceTree = "<group>"; };
+		5D99EDB826AB035000032E41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ImageComments.strings; sourceTree = "<group>"; };
+		5D99EDB926AB035100032E41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ImageComments.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -799,7 +801,7 @@
 		5D99EDAD26AB00B900032E41 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5D99EDAE26AB00F700032E41 /* ImageComments.strings */,
+				5D99EDB726AB034B00032E41 /* ImageComments.strings */,
 				5D99EDB026AB012600032E41 /* ImageCommentsPresenter.swift */,
 			);
 			path = Presentation;
@@ -965,7 +967,7 @@
 			files = (
 				087148B7232BEB5400D6BE1A /* Feed.strings in Resources */,
 				08EF9D1F250BB7E8004539C2 /* Shared.strings in Resources */,
-				5D99EDAF26AB00F700032E41 /* ImageComments.strings in Resources */,
+				5D99EDB526AB034B00032E41 /* ImageComments.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1190,6 +1192,16 @@
 				08EF9D23250BB7F0004539C2 /* pt-BR */,
 			);
 			name = Shared.strings;
+			sourceTree = "<group>";
+		};
+		5D99EDB726AB034B00032E41 /* ImageComments.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D99EDB626AB034B00032E41 /* el */,
+				5D99EDB826AB035000032E41 /* en */,
+				5D99EDB926AB035100032E41 /* pt-BR */,
+			);
+			name = ImageComments.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
