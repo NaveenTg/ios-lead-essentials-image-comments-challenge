@@ -11,11 +11,11 @@ class ImageCommentsPresenterTests: XCTestCase {
 	}
 
 	func test_map_createsViewModel() {
-		let feed = uniqueImageFeed().models
+		let comments = uniqueImageComment()
 
-		let viewModel = ImageCommentsPresenter.map(feed)
+		let viewModel = ImageCommentsPresenter.map(comments)
 
-		XCTAssertEqual(viewModel.feed, feed)
+		XCTAssertEqual(viewModel.comments, comments)
 	}
 
 	// MARK: - Helpers
@@ -28,5 +28,10 @@ class ImageCommentsPresenterTests: XCTestCase {
 			XCTFail("Missing localized string for key: \(key) in table: \(table)", file: file, line: line)
 		}
 		return value
+	}
+
+	func uniqueImageComment() -> [ImageComment] {
+		let imageComment = ImageComment(id: UUID(), message: "A Message", createdAt: Date(), userName: "A UserName")
+		return [imageComment, imageComment]
 	}
 }

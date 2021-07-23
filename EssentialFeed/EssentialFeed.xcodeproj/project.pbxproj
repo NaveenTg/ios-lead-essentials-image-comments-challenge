@@ -110,6 +110,7 @@
 		5D99EDB426AB01A600032E41 /* ImageCommentsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDB326AB01A600032E41 /* ImageCommentsPresenterTests.swift */; };
 		5D99EDB526AB034B00032E41 /* ImageComments.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D99EDB726AB034B00032E41 /* ImageComments.strings */; };
 		5D99EDBB26AB061A00032E41 /* ImageCommentsLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDBA26AB061A00032E41 /* ImageCommentsLocalizationTests.swift */; };
+		5D99EDBD26AB08AA00032E41 /* ImageCommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDBC26AB08AA00032E41 /* ImageCommentsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +245,7 @@
 		5D99EDB826AB035000032E41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ImageComments.strings; sourceTree = "<group>"; };
 		5D99EDB926AB035100032E41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ImageComments.strings"; sourceTree = "<group>"; };
 		5D99EDBA26AB061A00032E41 /* ImageCommentsLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsLocalizationTests.swift; sourceTree = "<group>"; };
+		5D99EDBC26AB08AA00032E41 /* ImageCommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -805,6 +807,7 @@
 			children = (
 				5D99EDB726AB034B00032E41 /* ImageComments.strings */,
 				5D99EDB026AB012600032E41 /* ImageCommentsPresenter.swift */,
+				5D99EDBC26AB08AA00032E41 /* ImageCommentsViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -1062,6 +1065,7 @@
 				08E546CC24F9631300C64FAE /* FeedImageDataMapper.swift in Sources */,
 				08E5941522523FCC00E2D213 /* FeedCachePolicy.swift in Sources */,
 				08285AF4228BFAFF000A8987 /* FeedStore.xcdatamodeld in Sources */,
+				5D99EDBD26AB08AA00032E41 /* ImageCommentsViewModel.swift in Sources */,
 				08604505233E316F005ECD22 /* CoreDataFeedStore+FeedStore.swift in Sources */,
 				5D99EDA826AADA7600032E41 /* ImageComment.swift in Sources */,
 				0886893A221DAA34007BC3E7 /* LocalFeedImage.swift in Sources */,
