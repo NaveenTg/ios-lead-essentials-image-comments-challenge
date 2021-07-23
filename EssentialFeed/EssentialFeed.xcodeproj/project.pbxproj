@@ -109,6 +109,7 @@
 		5D99EDB126AB012600032E41 /* ImageCommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDB026AB012600032E41 /* ImageCommentsPresenter.swift */; };
 		5D99EDB426AB01A600032E41 /* ImageCommentsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDB326AB01A600032E41 /* ImageCommentsPresenterTests.swift */; };
 		5D99EDB526AB034B00032E41 /* ImageComments.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D99EDB726AB034B00032E41 /* ImageComments.strings */; };
+		5D99EDBB26AB061A00032E41 /* ImageCommentsLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D99EDBA26AB061A00032E41 /* ImageCommentsLocalizationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +243,7 @@
 		5D99EDB626AB034B00032E41 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/ImageComments.strings; sourceTree = "<group>"; };
 		5D99EDB826AB035000032E41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ImageComments.strings; sourceTree = "<group>"; };
 		5D99EDB926AB035100032E41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ImageComments.strings"; sourceTree = "<group>"; };
+		5D99EDBA26AB061A00032E41 /* ImageCommentsLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsLocalizationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -811,6 +813,7 @@
 			isa = PBXGroup;
 			children = (
 				5D99EDB326AB01A600032E41 /* ImageCommentsPresenterTests.swift */,
+				5D99EDBA26AB061A00032E41 /* ImageCommentsLocalizationTests.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				08EF9D25250BBA25004539C2 /* SharedLocalizationTestHelpers.swift in Sources */,
 				08805A19233A9F8600509F19 /* URLProtocolStub.swift in Sources */,
 				081C0DAF22491A2400AC754E /* ValidateFeedCacheUseCaseTests.swift in Sources */,
+				5D99EDBB26AB061A00032E41 /* ImageCommentsLocalizationTests.swift in Sources */,
 				5D99EDAC26AAF83D00032E41 /* ImageCommentsEndpointTests.swift in Sources */,
 				087148AC232BDF6900D6BE1A /* FeedPresenterTests.swift in Sources */,
 				08897BE8233910040029F5E4 /* FeedImageDataMapperTests.swift in Sources */,
