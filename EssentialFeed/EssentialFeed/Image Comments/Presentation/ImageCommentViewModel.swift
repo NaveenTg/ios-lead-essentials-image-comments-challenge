@@ -7,11 +7,11 @@ import Foundation
 public struct ImageCommentViewModel: Hashable {
 	public let message: String
 	public let date: String
-	public let userName: String
+	public let username: String
 
-	public init(message: String, date: String, userName: String) {
+	public init(message: String, date: String, username: String) {
 		self.message = message
 		self.date = date
-		self.userName = userName
+		self.username = username
 	}
 }

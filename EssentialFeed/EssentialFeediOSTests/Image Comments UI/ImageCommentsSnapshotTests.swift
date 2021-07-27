@@ -40,15 +40,15 @@ class ImageCommentsSnapshotTests: XCTestCase {
 			ImageCommentCellController(
 				model: ImageCommentViewModel(message: "East Side Gallery",
 				                             date: "999 years ago",
-				                             userName: "First Guy")),
+				                             username: "First Guy")),
 			ImageCommentCellController(
 				model: ImageCommentViewModel(message: "East Side Gallery\n is in Berlin Germany",
 				                             date: "9 days ago",
-				                             userName: "Second Guy")),
+				                             username: "Second Guy")),
 			ImageCommentCellController(
 				model: ImageCommentViewModel(message: "A Nice Place",
 				                             date: "9 minutes ago",
-				                             userName: "Third Guy"))
+				                             username: "Third Guy"))
 		]
 	}
 }

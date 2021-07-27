@@ -19,7 +19,7 @@ public class ImageCommentCellController: NSObject, UITableViewDataSource {
 	public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell: ImageCommentCell = tableView.dequeueReusableCell()
 		cell.messageLabel.text = model.message
-		cell.userNameLabel.text = model.userName
+		cell.userNameLabel.text = model.username
 		cell.dateLabel.text = model.date
 		return cell
 	}

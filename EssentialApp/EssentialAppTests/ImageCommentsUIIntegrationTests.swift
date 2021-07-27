@@ -160,7 +160,7 @@ class ImageCommentsUIIntegrationTests: XCTestCase {
 	}
 
 	private func makeComment(message: String = "any message", userName: String = "First UserName") -> ImageComment {
-		return ImageComment(id: UUID(), message: message, createdAt: Date(), userName: userName)
+		return ImageComment(id: UUID(), message: message, createdAt: Date(), username: userName)
 	}
 
 	private func assertThat(_ sut: ListViewController, isRendering comments: [ImageComment], file: StaticString = #filePath, line: UInt = #line) {
@@ -171,7 +171,7 @@ class ImageCommentsUIIntegrationTests: XCTestCase {
 		viewModel.comments.enumerated().forEach { index, comment in
 			XCTAssertEqual(sut.commentMessage(at: index), comment.message, "message at \(index)", file: file, line: line)
 			XCTAssertEqual(sut.commentDate(at: index), comment.date, "date at \(index)", file: file, line: line)
-			XCTAssertEqual(sut.commentUsername(at: index), comment.userName, "username at \(index)", file: file, line: line)
+			XCTAssertEqual(sut.commentUsername(at: index), comment.username, "username at \(index)", file: file, line: line)
 		}
 	}
 

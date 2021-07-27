@@ -124,7 +124,7 @@ class FeedAcceptanceTests: XCTestCase {
 			[
 				"id": UUID().uuidString,
 				"message": makeImageCommentMessage(),
-				"createdAt": "2020-05-20T11:24:59+0000",
+				"created_at": "2020-05-20T11:24:59+0000",
 				"author": [
 					"username": "a username"
 				]

@@ -17,11 +17,11 @@ class ImageCommentsPresenterTests: XCTestCase {
 			ImageComment(id: UUID(),
 			             message: "First Message",
 			             createdAt: Date().adding(minutes: -5, calendar: calendar),
-			             userName: "First UserName"),
+			             username: "First UserName"),
 			ImageComment(id: UUID(),
 			             message: "Second Message",
 			             createdAt: Date().adding(days: -1, calendar: calendar),
-			             userName: "Second UserName")
+			             username: "Second UserName")
 		]
 
 		let viewModel = ImageCommentsPresenter.map(comments,
@@ -33,12 +33,12 @@ class ImageCommentsPresenterTests: XCTestCase {
 			ImageCommentViewModel(
 				message: "First Message",
 				date: "5 minutes ago",
-				userName: "First UserName"
+				username: "First UserName"
 			),
 			ImageCommentViewModel(
 				message: "Second Message",
 				date: "1 day ago",
-				userName: "Second UserName"
+				username: "Second UserName"
 			)
 		])
 	}
