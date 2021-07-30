@@ -6,7 +6,7 @@ import XCTest
 import EssentialFeed
 
 class ImageCommentsMapperTests: XCTestCase {
-	func test_map_throwsErrorOnNon200HTTPResponse() throws {
+	func test_map_throwsErrorOnNon2xxHTTPResponse() throws {
 		let json = makeItemsJSON([])
 		let samples = [199, 130, 300, 400, 500]
 
@@ -17,7 +17,7 @@ class ImageCommentsMapperTests: XCTestCase {
 		}
 	}
 
-	func test_map_throwsErrorOn200HTTPResponseWithInvalidJSON() throws {
+	func test_map_throwsErrorOn2xxHTTPResponseWithInvalidJSON() throws {
 		let invalidJSON = Data("invalid json".utf8)
 		let samples = [200, 201, 250, 270, 299]
 
@@ -28,7 +28,7 @@ class ImageCommentsMapperTests: XCTestCase {
 		}
 	}
 
-	func test_map_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() throws {
+	func test_map_deliversNoItemsOn2xxHTTPResponseWithEmptyJSONList() throws {
 		let emptyListJSON = makeItemsJSON([])
 		let samples = [200, 201, 250, 270, 299]
 		try samples.forEach { code in
@@ -37,7 +37,7 @@ class ImageCommentsMapperTests: XCTestCase {
 		}
 	}
 
-	func test_map_deliversItemsOn200HTTPResponseWithJSONItems() throws {
+	func test_map_deliversItemsOn2xxHTTPResponseWithJSONItems() throws {
 		let item1 = makeComment(
 			id: UUID(),
 			message: "First Message",
