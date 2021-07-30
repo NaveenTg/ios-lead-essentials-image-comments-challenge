@@ -10,7 +10,7 @@ import EssentialFeed
 import EssentialFeediOS
 
 class ImageCommentsUIIntegrationTests: XCTestCase {
-	func test_feedView_hasTitle() {
+	func test_commentsView_hasTitle() {
 		let (sut, _) = makeSUT()
 
 		sut.loadViewIfNeeded()
