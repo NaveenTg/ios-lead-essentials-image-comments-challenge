@@ -47,7 +47,7 @@ class ImageCommentsMapperTests: XCTestCase {
 		let item2 = makeComment(
 			id: UUID(),
 			message: "Second Message",
-			createdAt: (Date(timeIntervalSince1970: 1627042700), "2021-07-23T12:18:20+00:00"),
+			createdAt: (Date(timeIntervalSince1970: 1627658894), "2021-07-30T15:28:14+00:00"),
 			userName: "Second UserName")
 
 		let json = makeItemsJSON([item1.json, item2.json])
