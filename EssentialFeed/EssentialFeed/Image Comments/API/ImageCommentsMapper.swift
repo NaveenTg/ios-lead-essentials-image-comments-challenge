@@ -35,7 +35,7 @@ public final class ImageCommentsMapper {
 	public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [ImageComment] {
 		let decoder = JSONDecoder()
 		decoder.dateDecodingStrategy = .iso8601
-		guard ImageCommentsMapper.isOK(response), let root = try? decoder.decode(Root.self, from: data) else {
+		guard isOK(response), let root = try? decoder.decode(Root.self, from: data) else {
 			throw Error.invalidData
 		}
 
