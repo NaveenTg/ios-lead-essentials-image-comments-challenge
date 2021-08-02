@@ -11,7 +11,7 @@ class ImageCommentsEndpointTests: XCTestCase {
 		let uuidString = UUID(uuidString: "132e4765-e89b-12d3-a456-421466174000")!
 		let image = FeedImage(id: uuidString, description: "A Image Description", location: "World", url: anyURL())
 		let receivedURL = ImageCommentsEndpoint.get(image).url(baseURL: baseURL)
-		let expectedURL = URL(string: "http://base-url.com/v1/image/\(image.id)/comments")!
+		let expectedURL = URL(string: "http://base-url.com/v1/image/132E4765-E89B-12D3-A456-421466174000/comments")!
 
 		XCTAssertEqual(receivedURL, expectedURL)
 	}
